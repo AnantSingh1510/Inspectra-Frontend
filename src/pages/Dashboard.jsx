@@ -27,7 +27,7 @@ const Dashboard = () => {
   // Fetch user's history data
   const fetchHistory = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/protected/pull-request/history", { withCredentials: true });
+      const response = await axios.get("https://inspectra-backend.onrender.com/protected/pull-request/history", { withCredentials: true });
       const rawData = response.data.data || [];
       setHistory(rawData);
 
@@ -87,7 +87,7 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       setLoading(true);
       try {
-        await axios.get("http://localhost:3000/protected/dashboard", {
+        await axios.get("https://inspectra-backend.onrender.com/protected/dashboard", {
           withCredentials: true,
         });
       } catch (err) {

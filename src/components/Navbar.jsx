@@ -12,7 +12,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchUser = async() => {
       try {
-        const response = await axios.get("http://localhost:3000/protected/me", { withCredentials: true });
+        const response = await axios.get("https://inspectra-backend.onrender.com/protected/me", { withCredentials: true });
         dispatch(setUser(response.data.user))
       } catch (err) {
         console.error("User not authenticated", err);

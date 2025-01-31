@@ -39,7 +39,7 @@ const Authenticate = () => {
     // }
 
     try {
-      await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true });
+      await axios.post("https://inspectra-backend.onrender.com/login", { email, password }, { withCredentials: true });
 
       console.log("Logging in with", { email });
       setError(""); // Clear error on success
@@ -70,7 +70,7 @@ const Authenticate = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/signup", { email, password, username }, { withCredentials: true });
+      const response = await axios.post("https://inspectra-backend.onrender.com/signup", { email, password, username }, { withCredentials: true });
 
       console.log("Signing up with", { email });
       dispatch(setUser(response.data.user));

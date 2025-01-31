@@ -63,7 +63,7 @@ const Review = () => {
   const generatePrReview = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/protected/pull-request/review', {
+      const response = await axios.post('https://inspectra-backend.onrender.com/protected/pull-request/review', {
         owner: owner,
         repo: repoName,
         pull_number: prNumber

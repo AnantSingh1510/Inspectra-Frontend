@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:3000/logout", {}, { withCredentials: true });
+      await axios.post("https://inspectra-backend.onrender.com/logout", {}, { withCredentials: true });
       dispatch(logoutUser());
       navigate("/");
     } catch (error) {

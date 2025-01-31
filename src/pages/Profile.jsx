@@ -22,7 +22,7 @@ const Profile = () => {
   const fetchHistory = async() => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/protected/pull-request/history', { withCredentials: true });
+      const response = await axios.get('https://inspectra-backend.onrender.com/protected/pull-request/history', { withCredentials: true });
       setHistory(response.data.data || []);
     } catch (err) {
       console.log(err);
@@ -39,7 +39,7 @@ const Profile = () => {
   const handleDeleteAccount = async () => {
     setLoading(true);
     try {
-      const response = await axios.delete('http://localhost:3000/protected/deleteAccount', { withCredentials: true });
+      const response = await axios.delete('https://inspectra-backend.onrender.com/protected/deleteAccount', { withCredentials: true });
       console.log(response.data.message);
     } catch (err) {
       console.error('Error deleting account:', err);
