@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Button, Text, Container } from "@chakra-ui/react";
+import { Box, Flex, Image, Button, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";

@@ -24,9 +24,9 @@ const Authenticate = () => {
   };
 
   // Password Validation
-  const isValidPassword = (password) => {
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
-  };
+  // const isValidPassword = (password) => {
+  //   return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+  // };
 
   const handleLogin = async () => {
     if (!email || !password) {
@@ -39,7 +39,7 @@ const Authenticate = () => {
     // }
 
     try {
-      const response = await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true });
+      await axios.post("http://localhost:3000/login", { email, password }, { withCredentials: true });
 
       console.log("Logging in with", { email });
       setError(""); // Clear error on success

@@ -1,4 +1,4 @@
-import { Box, Button, Input, SimpleGrid, Spinner, Tabs, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Input, SimpleGrid, Tabs, Text, VStack } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { LuSquareCheck, LuUser } from "react-icons/lu";
@@ -35,6 +35,7 @@ const Review = () => {
       return;
     }
 
+    // eslint-disable-next-line no-useless-escape
     const regex = /https:\/\/github\.com\/([^\/]+)\/([^\/]+)\/pull\/(\d+)/;
     const match = repoLink.match(regex);
 
@@ -85,7 +86,7 @@ const Review = () => {
 
   const inputBg = 'gray.800';
   const borderColor = 'gray.700';
-  const buttonHoverBg = 'blue.300';
+  // const buttonHoverBg = 'blue.300';
 
   return (
     <Box
@@ -223,7 +224,7 @@ const Review = () => {
           >
             <ReactMarkdown
               components={{
-                code({ node, inline, className, children }) {
+                code({ inline, className, children }) {
                   const language = className?.replace('language-', '');
                   return !inline && language ? (
                     <SyntaxHighlighter

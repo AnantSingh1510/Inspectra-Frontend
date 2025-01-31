@@ -1,4 +1,5 @@
-import { Button, Card, DialogActionTrigger, DialogBody, DialogCloseTrigger, DialogContent, DialogFooter, DialogHeader, DialogRoot, DialogTitle, DialogTrigger, Heading, HStack, SimpleGrid, Tabs, Text, Spinner, VStack, Image, AvatarIcon, List, Icon, Box, Badge, Link, Avatar } from "@chakra-ui/react"
+import { Button, Card, DialogBody, DialogCloseTrigger, DialogContent, DialogFooter, DialogHeader, DialogRoot, DialogTitle, DialogTrigger, 
+  Heading, HStack, SimpleGrid, Tabs, Text, VStack, List, Icon, Box, Badge, Link } from "@chakra-ui/react"
 import { LuFolder, LuSquareCheck, LuUser } from "react-icons/lu"
 import { FaArrowRight, FaExclamationTriangle } from "react-icons/fa"
 import axios from "axios"

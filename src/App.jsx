@@ -5,7 +5,7 @@ import Homepage from '../src/pages/Homepage';
 import RootLayout from '../src/Layouts/RootLayout';
 import Dashboard from '../src/pages/Dashboard';
 import Review from '../src/pages/Review';
-import Authenticate from './pages/Authenticate';
+import Authenticate from '../src/pages/Authenticate';
 
 function App() {
 

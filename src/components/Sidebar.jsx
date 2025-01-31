@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react";
 import axios from "axios";
-import { FaCalendar, FaCode, FaHome, FaPagelines, FaPersonBooth, FaSignOutAlt, FaTablet } from "react-icons/fa";
+import { FaCalendar, FaCode, FaPagelines, FaPersonBooth, FaSignOutAlt, FaTablet } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { logoutUser } from "../redux/userSlice";

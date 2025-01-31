@@ -1,5 +1,5 @@
 import { Box, SimpleGrid, Link, Text, VStack, IconButton } from '@chakra-ui/react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (

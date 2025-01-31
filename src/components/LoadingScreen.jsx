@@ -1,6 +1,6 @@
 import { Spinner, Box, Text, Center } from "@chakra-ui/react";
 
-const LoadingScreen = ({ text = "Loading..." }) => {
+const LoadingScreen = () => {
   return (
     <Center
       position="fixed"
@@ -13,7 +13,7 @@ const LoadingScreen = ({ text = "Loading..." }) => {
     >
       <Box textAlign="center" color="white">
         <Spinner size="xl" thickness="4px" speed="0.65s" color="orange.400" />
-        <Text mt={4}>{text}</Text>
+        <Text mt={4}>{'Loading'}</Text>
       </Box>
     </Center>
   );
