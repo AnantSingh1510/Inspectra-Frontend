@@ -1,4 +1,4 @@
-import { Provider as UiProvider } from "./components/ui/provider.jsx"
+import { Provider as UiProvider } from "../src/components/ui/Provider.jsx"
 import { Provider } from "react-redux"
 import store from './redux/store.js'
 import { StrictMode } from "react"
