@@ -1,10 +1,10 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Profile from './pages/Profile';
-import Homepage from './pages/Homepage';
-import RootLayout from './Layouts/RootLayout';
-import Dashboard from './pages/DashBoard';
-import Review from './pages/Review';
+import Profile from '../src/pages/Profile';
+import Homepage from '../src/pages/Homepage';
+import RootLayout from '../src/Layouts/RootLayout';
+import Dashboard from '../src/pages/DashBoard';
+import Review from '../src/pages/Review';
 import Authenticate from './pages/Authenticate';
 
 function App() {
