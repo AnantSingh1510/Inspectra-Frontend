@@ -1,4 +1,6 @@
 import { Box, Flex, Image, Button, Text } from "@chakra-ui/react";
+import axios from "axios";
+import { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -14,6 +16,20 @@ const Homepage = () => {
     }
     navigate("/auth/dashboard");
   };
+
+  useEffect(() => {
+    const startRenderService = async() => {
+      try{
+        await axios.get('https://inspectra-backend.onrender.com/protected/dashboard');
+      } catch {
+        console.log('Starting the backend service')
+      } finally {
+        console.log('this might take 50s or more, please wait')
+      }
+    }
+
+    startRenderService();
+  }, [])
 
   return (
     <Box
