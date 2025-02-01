@@ -1,5 +1,6 @@
 'use client';
 
+import { Card, Text } from '@chakra-ui/react';
 import {
   LineChart,
   Line,
@@ -20,6 +21,7 @@ const LineChartComponent = ( {reviewData} ) => {
         height={300}
         data={reviewData}
         margin={{
+          top: 40,
           right: 30,
         }}
       >
@@ -40,17 +42,19 @@ export default LineChartComponent;
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="p-4 bg-slate-900 flex flex-col gap-4 rounded-md">
-        <p className="text-medium text-lg">{label}</p>
-        <p className="text-sm text-blue-400">
-          Pull review requests:
-          <span className="ml-2">{payload[0].value}</span>
-        </p>
-        {/* <p className="text-sm text-indigo-400">
-          Review requests:
-          <span className="ml-2">{payload[1].value}</span>
-        </p> */}
-      </div>
+      <Card.Root bg='rgba(61, 61, 61, 0.4)'>
+        <Card.Body>
+          <Text>{label}</Text>
+          <Text>
+            Code Review Requests: {payload[0].value}
+          </Text>
+          {/* <p className="text-sm text-indigo-400">
+            Review requests:
+            <span className="ml-2">{payload[1].value}</span>
+          </p> */}
+        </Card.Body>
+      </Card.Root>
+
     );
   }
 };

@@ -122,7 +122,7 @@ const Dashboard = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        bgGradient: 'radial(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 60%)',
+        bgGradient: 'radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 60%);',
         pointerEvents: 'none',
         zIndex: 0
       }}
@@ -130,7 +130,8 @@ const Dashboard = () => {
       <Box position="relative" zIndex={1}>
         <Heading 
           fontSize="2em" 
-          mb={10}
+          mb={5}
+          p={4}
           bgGradient="linear-gradient(45deg, #64ffda 0%, #10b981 50%, #00c8ff 100%)"
           bgClip="text"
           textShadow="0 0 20px rgba(100, 255, 218, 0.3)"
@@ -155,7 +156,7 @@ const Dashboard = () => {
           <Heading as="h2" fontSize="xl" mb={6} color="teal.400">
             🔥 Popular Repositories
           </Heading>
-          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={6}>
+          <SimpleGrid columns={{ base: 1, md: 2, xl: 3 }} gap={6}>
             {popularRepos.map((repo, index) => (
               <Card.Root 
                 key={index} 

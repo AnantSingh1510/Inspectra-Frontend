@@ -27,8 +27,8 @@ const Sidebar = () => {
     { path: "/auth/dashboard", name: "Dashboard", icon: FaTablet },
     { path: "/auth/profile", name: "Profile", icon: FaPersonBooth },
     { path: "/auth/review", name: "Review", icon: FaCode },
-    { path: "/auth/activity", name: "Activity", icon: FaCalendar },
-    { path: "/auth/projects", name: "Projects", icon: FaPagelines },
+    // { path: "/auth/activity", name: "Activity", icon: FaCalendar },
+    // { path: "/auth/projects", name: "Projects", icon: FaPagelines },
   ];
 
   return (

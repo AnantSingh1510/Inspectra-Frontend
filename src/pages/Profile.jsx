@@ -1,7 +1,9 @@
 import { Button, Card, DialogBody, DialogCloseTrigger, DialogContent, DialogFooter, DialogHeader, DialogRoot, DialogTitle, DialogTrigger, 
-  Heading, HStack, SimpleGrid, Tabs, Text, VStack, List, Icon, Box, Badge, Link } from "@chakra-ui/react"
+  Heading, HStack, SimpleGrid, Tabs, Text, VStack, List, Icon, Box, Badge, Link, 
+  Image,
+  AvatarIcon} from "@chakra-ui/react"
 import { LuFolder, LuSquareCheck, LuUser } from "react-icons/lu"
-import { FaArrowRight, FaExclamationTriangle } from "react-icons/fa"
+import { FaArrowRight, FaExclamationTriangle, FaPersonBooth } from "react-icons/fa"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { format } from "date-fns";
@@ -64,7 +66,7 @@ const Profile = () => {
   return (
     <Box
       minH="100vh"
-      bgGradient="linear(to-b, gray.900, gray.800)"
+      bgGradient="radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 60%)"
       color="white"
       p={8}
     >
@@ -117,7 +119,7 @@ const Profile = () => {
         <Tabs.Content value="personal">
           <Card.Root 
             maxW="400px" 
-            bgGradient="linear(to-br, gray.800, gray.700)"
+            bgGradient="linear-gradient(to bottom right, #27272A, #3F3F46)"
             borderRadius="2xl"
             boxShadow="xl"
             p={6}
@@ -125,30 +127,41 @@ const Profile = () => {
             _hover={{ transform: "translateY(-4px)" }}
           >
             <Card.Body textAlign="center">
-              {/* <Avatar 
-                name={user.name} 
-                size="xl" 
-                mb={4}
-                border="2px solid"
-                borderColor="teal.500"
-                boxShadow="0 0 20px rgba(16, 185, 129, 0.3)"
-              /> */}
+              <Box justifyItems='center'>
+              <AvatarIcon boxSize={{ base: "100px", md: "150px", lg: "100px" }}
+                mb={{ base: 2, md: 4 }}/>
+              </Box>
               
-              <VStack spacing={2}>
-                <Heading size="lg" bgGradient="linear(to-r, teal.300, cyan.400)" bgClip="text">
+              <VStack spacing={{ base: 1, md: 2 }}>
+                <Heading 
+                  fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+                  bgGradient="linear(to-r, teal.300, cyan.400)" 
+                  bgClip="text"
+                  lineHeight={{ base: 1.2, md: 1.3 }}
+                >
                   {user.username}
                 </Heading>
-                <Text fontSize="md" color="gray.300">{user.email}</Text>
+                <Text 
+                  fontSize={{ base: "sm", md: "md" }} 
+                  color="gray.300"
+                  noOfLines={1}
+                >
+                  {user.email}
+                </Text>
               </VStack>
 
-              <VStack spacing={1} mt={6} color="gray.400">
-                <Text fontSize="sm">
+              <VStack 
+                spacing={{ base: 0.5, md: 1 }} 
+                mt={{ base: 4, md: 6 }} 
+                color="gray.400"
+              >
+                <Text fontSize={{ base: "xs", md: "sm" }}>
                   Member since:{" "}
                   <Text as="span" color="teal.300">
                     {formatDate(user.createdAt)}
                   </Text>
                 </Text>
-                <Text fontSize="sm">
+                <Text fontSize={{ base: "xs", md: "sm" }}>
                   Last updated:{" "}
                   <Text as="span" color="teal.300">
                     {formatDate(user.updatedAt)}
@@ -180,7 +193,7 @@ const Profile = () => {
                 >
                   <Card.Body p={6}>
                     <VStack align="start" spacing={3}>
-                      <Heading size="md" color="teal.300">
+                      <Heading size="md" color='teal.300'>
                         {item.repoName}
                       </Heading>
                       <Text fontSize="sm" color="gray.300">
@@ -205,7 +218,7 @@ const Profile = () => {
                       </Text>
                       <Badge 
                         variant="subtle" 
-                        colorScheme={item.status === 'Completed' ? 'green' : 'orange'}
+                        bg={item.status === 'Completed' ? 'green' : 'green'}
                         alignSelf="flex-start"
                       >
                         {item.status || 'Completed'}
@@ -251,10 +264,12 @@ const Profile = () => {
               <DialogTrigger>
                 <Button
                   colorScheme="red"
+                  color='white'
+                  bg='red.500'
                   variant="outline"
                   rightIcon={<FaArrowRight />}
                   _hover={{
-                    bgGradient: "linear(to-r, red.600, red.500)",
+                    bgGradient: "linear-gradient(to right, #DC2626, #EF4444)",
                     color: "white"
                   }}
                 >
@@ -296,7 +311,8 @@ const Profile = () => {
                       </Button>
                     </DialogCloseTrigger>
                     <Button
-                      colorScheme="red"
+                      bg="red"
+                      color='white'
                       isLoading={loading}
                       loadingText="Deleting..."
                       onClick={handleDeleteAccount}
