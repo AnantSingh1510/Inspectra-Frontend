@@ -1,9 +1,7 @@
 import { Button, Card, DialogBody, DialogCloseTrigger, DialogContent, DialogFooter, DialogHeader, DialogRoot, DialogTitle, DialogTrigger, 
-  Heading, HStack, SimpleGrid, Tabs, Text, VStack, List, Icon, Box, Badge, Link, 
-  Image,
-  AvatarIcon} from "@chakra-ui/react"
+  Heading, HStack, SimpleGrid, Tabs, Text, VStack, List, Icon, Box, Badge, Link, AvatarIcon} from "@chakra-ui/react"
 import { LuFolder, LuSquareCheck, LuUser } from "react-icons/lu"
-import { FaArrowRight, FaExclamationTriangle, FaPersonBooth } from "react-icons/fa"
+import { FaArrowRight, FaExclamationTriangle } from "react-icons/fa"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { format } from "date-fns";
