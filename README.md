@@ -12,6 +12,10 @@
 
 ![Inspectra Dashboard Preview](/images/image-2.png)
 
+## Test Credentials:
+- **Email:** anant@gmail.com
+- **Password**: abcd
+
 ## 🚀 Features
 
 ### 🤖 AI-Powered Code Analysis
