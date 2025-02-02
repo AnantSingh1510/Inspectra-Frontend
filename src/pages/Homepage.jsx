@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+  const text = `< Inspectra />`
   const navigate = useNavigate();
   const username = useSelector((state) => state.user.username);
 
@@ -59,12 +60,12 @@ const Homepage = () => {
         />
 
         {/* Logo */}
-        <Image 
+        {/* <Image 
           src="../src/assets/react.svg" 
           height="100px" 
           mb={4}
           filter="drop-shadow(0 0 15px rgba(16, 185, 129, 0.4))"
-        />
+        /> */}
 
         {/* Main Title */}
         <Text
@@ -77,7 +78,7 @@ const Homepage = () => {
           letterSpacing="tighter"
           textShadow="0 0 20px rgba(100, 255, 218, 0.3)"
         >
-          Inspectra
+          {text}
         </Text>
 
         {/* Subtitle */}

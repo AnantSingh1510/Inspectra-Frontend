@@ -72,15 +72,16 @@ const Review = () => {
       }, {
         withCredentials: true
       });
+      console.log(response.data)
 
       const cleanedOutput = JSON.parse(response.data.data);
       setReviewResult(cleanedOutput);
-      console.log(cleanedOutput)
+      // console.log(cleanedOutput)
 
-      setStatus(cleanedOutput.status)
+      // setStatus(cleanedOutput.status)
     } catch (error) {
       console.error('Error while generating PR review: ', error);
-      setError('Error while generating PR review', error);
+      setError('Error while generating PR review');
     } finally {
       setLoading(false);
     }

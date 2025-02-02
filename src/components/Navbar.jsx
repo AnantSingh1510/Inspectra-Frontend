@@ -8,6 +8,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.username)
   const username = useSelector((state) => state.user.username);
+  const text = '< Inspectra />'
 
   useEffect(() => {
     const fetchUser = async() => {
@@ -26,8 +27,21 @@ const Navbar = () => {
 
   return (
     <Flex as="nav" p={['10px', '20px']} mb='60px' alignItems='center' flexDirection={['column', 'row']}>
-      <Image src="..\src\assets\react.svg"  mr='5px' />
-      <Heading as="h1" fontSize={['1.5em', '2em']} textAlign={['center', 'left']}>Inspectra</Heading>
+      {/* <Heading as="h1" fontSize={['1.5em', '2em']} textAlign={['center', 'left']}>Inspectra</Heading> */}
+      <Text
+          as="h1"
+          fontSize={['1.5em', '2em']}
+          fontWeight="bold"
+          bgGradient="linear-gradient(45deg, #64ffda 0%, #10b981 50%, #00c8ff 100%)"
+          bgClip="text"
+          width='100%'
+          letterSpacing="tighter"
+          textShadow="0 0 20px rgba(100, 255, 218, 0.3)"
+          textAlign={['center', 'left']}
+        >
+          {text}
+        </Text>
+
       <Spacer />
 
       <HStack mt={{base: '1.5em', sm: '0'}} spacing='20px' alignItems='center' justifyContent={['center', 'flex-end']} w="full">

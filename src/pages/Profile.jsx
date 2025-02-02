@@ -133,7 +133,7 @@ const Profile = () => {
               <VStack spacing={{ base: 1, md: 2 }}>
                 <Heading 
                   fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
-                  bgGradient="linear(to-r, teal.300, cyan.400)" 
+                  bgGradient="linear-gradient(to right, #5EEAD4, #22D3EE)" 
                   bgClip="text"
                   lineHeight={{ base: 1.2, md: 1.3 }}
                 >

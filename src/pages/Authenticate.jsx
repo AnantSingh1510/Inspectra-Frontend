@@ -45,7 +45,7 @@ const Authenticate = () => {
       setError(""); // Clear error on success
       navigate("/auth");
     } catch (err) {
-      setError(err.response?.data?.message || "An error occurred.");
+      setError(err.response?.data?.message || "The server on render takes a while to come online, please retry in a few seconds.");
     }
   };
 
